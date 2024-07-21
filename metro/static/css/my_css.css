@@ -1,0 +1,93 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_block {
+  border: 1px solid  #DCDCDC;
+  display: block;
+  border-radius: 10px;
+  height: 77vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 25px;
+}
+
+.post_block {
+  background-color:#F5F5F5;
+  display: block;
+  border-radius: 10px;
+  height: 130px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.user_block {
+  display: block;
+  border-radius: 10px;
+  height: 60px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding: 15px;
+  box-shadow: 0 0 5px 1px rgba(221, 221, 221, 1);
+}
+
+.index_block {
+  display: block;
+  border-radius: 10px;
+  height: 650px;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding: 15px;
+  box-shadow: 0 0 5px 1px rgba(221, 221, 221, 1);
+}
+
+.title {
+  display: block;
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-brand-top{
+  margin-right: 120px;
+}
+
+.navbar-brand-bottom{
+  margin-right: 920px;
+}
+
+.navbar-nav > li{
+  padding-right:30px;
+}
+
+.navbar .navbar-nav > li > a {
+  color: black;
+}
+
+.nav-item .active {
+  text-decoration: underline;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.user-img {
+  width: 50%;
+  float: left;
+  margin-right: 50px;
+}

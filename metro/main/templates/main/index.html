@@ -3,6 +3,21 @@
 
 {% block content %}
     <div class="main_block">
-        <h1 class="mt-5 pt-5"><strong>{{ content }}</strong></h1>
+        {% for user in users %}
+            <div class="index_block">
+                {% if user.image %}
+                    <img src="{{ user.image.url }}" class="user-img" alt="{{ user.full_name }}">
+                {% else %}
+                    <img src="{% static "images/imagenotfound.jpg" %}" class="user-img" alt="...">
+                {% endif %}
+                <h3>{{ user.full_name }}</h3><br>
+                <p>Все посты пользователя:</p>
+                {% for post in posts %}
+                    {% if post.author.full_name == user.full_name %}
+                        <p>{{ post.title }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endfor %}
     </div>
 {% endblock %}
