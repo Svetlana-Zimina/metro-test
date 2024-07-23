@@ -1,4 +1,4 @@
-from django.views.generic import DetailView, ListView
+from django.views.generic import ListView, UpdateView
 
 from users.models import User
 
@@ -17,17 +17,14 @@ class UsersListView(ListView):
         return context
 
 
-class ProfileView(DetailView):
+class UserUpdateView(UpdateView):
 
+    model = User
     template_name = 'users/user_profile.html'
-    str_url_kwarg = 'full_name'
-    context_object_name = 'users'
 
-    def get_object(self, queryset=None):
-        user = User.objects.get(full_name=self.kwargs.get(self.str_url_kwarg))
-        return user
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["title"] = self.object.full_name
-        return context
+    fields = [ 
+        'full_name',
+        'email',
+        'address'
+    ]
+    success_url = '/user'
