@@ -10,7 +10,7 @@
         {% for user in users %}
             <div class="user_block">
                 <img src="{% static 'images/user.png' %}" width="25" height="25" border="0" style="display: inline-block">
-                <a href="{% url "users:profile" user.id %}">
+                <a class="popup-open" data-fullname="{{ user.full_name }}" data-email="{{ user.email }}" data-address="{{ user.address }}" href="#">
                     <p style="display: inline-block; margin-right:450px; color:black">{{ user.full_name }}</p>
                 </a>
                 <img src="{% static 'images/email.png' %}" width="25" height="25" border="0" style="display: inline-block">
@@ -19,4 +19,24 @@
         {% endfor %}
     </div>
     
+    <!-- Разметка модального окна -->
+    <div class="popup-fade">
+        <div class="popup">
+            <p class="popup-header">ЛИЧНАЯ КАРТОЧКА</P>
+            <a class="popup-close" href="#">Х</a>
+            <div class="modal-body">
+                <div class="row">
+                <div class="userfullname"></div>
+                <div class="useremail"></div>
+                <div class="useraddress"></div>
+            </div>
+            <input id="hide1" type="hidden" value="">
+            <input id="hide2" type="hidden" value="">
+            <input id="hide3" type="hidden" value="">
+        </div>
+        <div class="btn-cont">
+            <button type="submit" class="save-btn">Сохранить</button>
+        </div>		
+    </div>
+        
 {% endblock %}
