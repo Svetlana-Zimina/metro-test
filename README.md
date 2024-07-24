@@ -27,7 +27,7 @@
 
 ## Локальный запуск проекта
 
-1. ### Склонируйте репозиторий:
+1. ### Перейдите в нужную папку и склонируйте репозиторий:
 ```
 git clone https://github.com/Svetlana-Zimina/metro-test.git
 ```
@@ -35,12 +35,14 @@ git clone https://github.com/Svetlana-Zimina/metro-test.git
 2. ### Создайте и активируйте виртуальное окружение:
 Команда для установки виртуального окружения на Mac или Linux:
 ```
+cd metro-test
 python3 -m venv env
 source env/bin/activate
 ```
 
 Команда для установки виртуального окружения на Windows:
 ```
+cd metro-test
 python -m venv venv
 source venv/Scripts/activate
 ```
@@ -57,8 +59,8 @@ python manage.py migrate
 
 5. ### Наполните базу:
 ```
-python manage.py loaddata users.json
-python manage.py loaddata posts.json
+python manage.py loaddata fixtures/users.json
+python manage.py loaddata fixtures/posts.json
 ```
 
 6. ### При необходимости создайте суперпользователя:
