@@ -1,10 +1,12 @@
 from django.views.generic import TemplateView
 
-from users.models import User
 from posts.models import Post
+from users.models import User
 
 
 class IndexView(TemplateView):
+    """Представление для отображения главной страницы."""
+
     template_name = 'main/index.html'
 
     def get_context_data(self, **kwargs):

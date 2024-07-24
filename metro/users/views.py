@@ -1,5 +1,4 @@
 from django.views.generic import ListView, UpdateView
-
 from users.models import User
 
 
@@ -18,6 +17,7 @@ class UsersListView(ListView):
 
 
 class UserUpdateView(UpdateView):
+    """Представление для редактирования информации о пользователе."""
 
     model = User
     template_name = 'users/user_profile.html'

@@ -4,6 +4,8 @@ from users.models import User
 
 
 class Post(models.Model):
+    """Модель Пост."""
+
     title = models.CharField(
         max_length=250,
         verbose_name='Название'
