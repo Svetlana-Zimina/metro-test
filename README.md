@@ -19,6 +19,9 @@
 - Python
 - Django
 - jquery
+- HTML
+- CSS
+- Bootstrap
 
 К проекту подключена база SQLite. 
 
